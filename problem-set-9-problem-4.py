@@ -49,7 +49,31 @@ OUTPUTS:
 """
 
 def main():
-    pass # remove this line
-    # your code goes here
+    morse_list = [' ', '--..--', '.-.-.-', '-----', '.----', '..---', '...--',
+                  '....-', '.....', '-....', '--...', '---..', '----.',
+                  '.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....',
+                  '..', '.---', '-.-', '.-..', '--', '-.', '---', '.--.',
+                  '--.-', '.-.', '...', '-', '..-', '...-', '.--', '-..-',
+                  '-.--', '--..']
+
+    char_list = [' ', ',', '.', '0', '1', '2', '3',
+                 '4', '5', '6', '7', '8', '9',
+                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+                 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+                 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
+                 'y', 'z']
+
+    finalMorse_list = []
+    sequence = input('Enter any sequence of lowercase letters and/or numbers: ')
+
+    for i in sequence:
+        character = i
+        for j in char_list:
+            if character == j:
+                x = char_list.index(j)
+                finalMorse_list.append(morse_list[x])
+
+    print(finalMorse_list)
+
 
 main()
